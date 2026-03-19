@@ -1,51 +1,39 @@
-# Welcome to your Expo app 👋
+# Mobile Dashboard Skeleton (High-Fidelity)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A professional-grade React Native dashboard application built with **Expo** and **TypeScript**. This project demonstrates "app-feel" execution, clean component architecture, and advanced navigation patterns required for high-quality mobile products.
 
-## Get started
+##  Key Features
+- **High-Fidelity Dark Theme:** A centralized design system using a custom color palette and typography constants.
+- **Dynamic Analytics Visualization:** Interactive line charts implemented via `react-native-chart-kit` and `react-native-svg`.
+- **Advanced Navigation:** A custom-refactored Stack navigation system using **Expo Router**, featuring smooth `slide_from_right` transitions and deep-linking capabilities.
+- **Optimized UI/UX:**
+    - Pixel-perfect safe area handling using `react-native-safe-area-context`.
+    - Micro-interactions (fade-in animations) using the `Animated` API.
+    - Defensive rendering to handle dynamic routing parameters.
 
-1. Install dependencies
+##  Tech Stack
+- **Framework:** Expo (SDK 50+)
+- **Language:** TypeScript
+- **Navigation:** Expo Router (File-based)
+- **Icons:** Expo Vector Icons (Ionicons)
+- **Visuals:** React Native SVG & Chart Kit
 
+##  Architecture & Best Practices
+This project follows the **Single Source of Truth** principle to ensure the code is scalable and maintainable:
+
+- **`/app`**: Clean routing structure. Removed default boilerplate to implement a focused Stack-only hierarchy for better UX.
+- **`/components`**: Atomic design approach. UI is broken down into reusable components (e.g., `TaskItem`, `UserProfile`) to minimize prop drilling and maximize reusability.
+- **`/constants`**: Centralized configuration for `Colors`, `Tasks`, and `AnalyticsData`. Zero hardcoded strings or hex codes in screen files.
+- **Performance:** Implemented `useNativeDriver` for animations to ensure 60fps transitions.
+
+##  Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
+- Expo Go app on your mobile device (optional for testing)
+
+### Installation
+1. Clone the repository:
    ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# mobile-dashboard
+   git clone <your-repo-url>
