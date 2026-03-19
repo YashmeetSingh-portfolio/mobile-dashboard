@@ -37,3 +37,5 @@ This project follows the **Single Source of Truth** principle to ensure the code
 1. Clone the repository:
    ```bash
    git clone <your-repo-url>
+   npm install
+   npx expo start
